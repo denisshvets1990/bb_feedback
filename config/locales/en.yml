@@ -1,0 +1,13 @@
+en:
+  time:
+    formats:
+      default: '%d.%m.%Y %H:%M'
+  email:
+    is_invalid: 'is invalid'
+  feedback_answer:
+    successfully_created: 'Answer successfully created'
+    has_been_created: 'Feedback answer has been created'
+  feedback:
+    received_responce: 'Your question received a responce'
+    has_been_created: 'Feedback has been created'
+    successfully_created: 'Feedback successfully created'

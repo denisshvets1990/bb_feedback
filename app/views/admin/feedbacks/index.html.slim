@@ -1,0 +1,25 @@
+.col-md-12
+  h2.page-header
+    | Feedbacks
+  = render 'shared/flash'
+  .panel.panel-default
+    .panel-body
+      table.table.table-striped
+        thead
+          tr
+            th Email
+            th Question
+            th Created At
+            th
+            th
+        tbody
+          - @feedbacks.each do |feedback|
+            tr
+              td= feedback.email
+              td= feedback.question
+              td= l(feedback.created_at, format: :default)
+              td= link_to 'Show', admin_feedback_path(feedback)
+              td
+                - if feedback.decorate.can_answer?
+                  = link_to 'Answer', new_admin_feedback_feedback_answer_path(feedback)
+      = paginate @feedbacks

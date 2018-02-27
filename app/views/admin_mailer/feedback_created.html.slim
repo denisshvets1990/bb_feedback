@@ -1,0 +1,12 @@
+table
+  - if @feedback.email.present?
+    tr
+      td
+        b
+          ' E-mail:
+        = @feedback.email
+  tr
+    td
+      b
+        ' Question text:
+        = @feedback.question

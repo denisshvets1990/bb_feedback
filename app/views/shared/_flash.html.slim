@@ -1,0 +1,11 @@
+- flash.each do |type, text|
+  - case type
+  - when 'alert'
+    .alert.alert-danger
+      = text
+  - when 'notice'
+    .alert.alert-info
+      = text
+  - when 'success'
+    .alert.alert-success
+      = text

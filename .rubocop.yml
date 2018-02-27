@@ -1,0 +1,46 @@
+Rails:
+  Enabled: true
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test
+    - staging
+
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+AllCops:
+  Exclude:
+    - tmp/**/*
+    - bin/**/*
+    - vendor/**/*
+    - db/schema.rb
+    - db/seeds.rb
+  TargetRailsVersion: 4.2
+
+TrailingBlankLines:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 130
+  Exclude:
+    - 'config/**/*'
+
+Metrics/ModuleLength:
+  Exclude:
+    - "**/*_spec.rb"
+
+Metrics/BlockLength:
+  Exclude:
+    - "**/*_spec.rb"
+
+Metrics/MethodLength:
+  Max: 20

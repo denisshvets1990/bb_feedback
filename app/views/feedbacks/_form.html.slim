@@ -1,0 +1,12 @@
+= form_for(@feedback) do |f|
+  = form_errors_for @feedback
+  = render 'shared/flash'
+  .form-group
+    label E-mail
+    = f.text_field :email, :class => 'form-control'
+  .form-group
+    label Question
+    = f.text_area :question, :class => 'form-control'
+  hr/
+  .actions
+    = f.submit 'Create feedback', :class => 'btn btn-primary'

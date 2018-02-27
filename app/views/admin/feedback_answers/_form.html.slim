@@ -1,0 +1,9 @@
+= form_for(@answer, url: admin_feedback_feedback_answers_path) do |f|
+  = form_errors_for @answer
+  = render 'shared/flash'
+  .form-group
+    label Answer
+    = f.text_area :answer, :class => 'form-control'
+  hr/
+  .actions
+    = f.submit 'Create answer', :class => 'btn btn-primary'

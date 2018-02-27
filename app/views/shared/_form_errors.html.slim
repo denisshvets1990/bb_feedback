@@ -1,0 +1,4 @@
+.alert.alert-danger
+  ul.alert-danger
+    - object.errors.full_messages.each do |message|
+      li= message

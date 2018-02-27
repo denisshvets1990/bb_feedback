@@ -1,0 +1,33 @@
+.col-md-6
+  .panel.panel-default
+    .panel-heading
+      .panel-title
+        | Feedback description
+    .panel-body
+      table.table.table-striped
+        tbody
+          tr
+            td Email
+            td= @feedback.email
+          tr
+            td Question
+            td= @feedback.question
+          tr
+            td Created date
+            td= l(@feedback.created_at, format: :default)
+.col-md-6
+  .panel.panel-default
+    .panel-heading
+      .panel-title
+        | Feedback answer
+    .panel-body
+      table.table.table-striped
+        tbody
+          - if @feedback.feedback_answer.present?
+            tr
+              td Answer
+              td= @feedback.feedback_answer.answer
+          - else
+            tr
+              td(colspan=2)
+                = link_to 'Create answer', new_admin_feedback_feedback_answer_path(@feedback), class: 'btn btn-danger'
